@@ -1,0 +1,30 @@
+[package]
+name = "moteria"
+version = "0.1.0"
+authors = ["mona"]
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "iroextract"
+path = "src/bin/iroextract.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bench]]
+name = "iro"
+harness = false
+
+[dependencies]
+zerocopy = "0.3.0"
+widestring = "0.4.0"
+anyhow = "1.0.28"
+byteorder = "1.3.4"
+lzma-rs = "0.1.2"
+roxmltree = "0.11.0"
+memmap = "0.7.0"
+clap = "2.33.0"
+
+[dev-dependencies]
+criterion = "0.3.2"
